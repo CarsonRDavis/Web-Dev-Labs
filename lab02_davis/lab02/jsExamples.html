@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Lab 2 - JS Examples</title>
+	<script type="text/javascript">
+
+        function squareRoot() {
+            var val = window.prompt("Gimme a number", 483);
+            var x = parseFloat(val);
+            var result = Math.sqrt(x);
+            window.alert("The sq.root of " + x + " is " + result.toFixed(3));
+		}
+
+		function greeting() {
+			var name = document.getElementById("txtName");
+			var result = document.getElementById("result");
+			result.innerHTML = "Hi, " + name.value;
+		}
+
+    </script>
+
+</head>
+<body>
+
+	<p><a href="default.html">Back</a> to Lab 2 Home Page</p>
+
+	<p><button id="btnSqRoot" onclick="squareRoot()">Square Root</button></p>
+
+	<p>
+    What is your name?
+    <input id="txtName" type="text" />
+    <input id="Button2" type="button" value="Enter" onclick="greeting()" />
+	</p>
+
+	<p id="result" class="special"></p>
+
+</body>
+</html>

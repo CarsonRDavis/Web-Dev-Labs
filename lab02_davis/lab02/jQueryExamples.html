@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Lab 2 - jQuery Examples</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	
+	<script type="text/javascript">
+		$(document).ready(function () {
+        $("#btnAge").click(function () {
+
+            var but = $(this);
+            var butText = but.text();
+
+            if (butText == "Enter") {
+                $("#result").text("You are " + $("#txtAge").prop('value') + " years old");
+                but.text("Reset");
+            }
+            else {
+                $("#ageStuff").fadeOut(1000);
+                $("#ageStuff").promise().done(function () {
+                    $("#result").text("");
+                    $("#txtAge").prop('value', '');
+       	             but.text("Enter");
+                    $("#ageStuff").fadeIn(1000);
+                    $("#txtAge").focus();
+                });
+            }
+        });
+    });
+	</script>
+
+</head>
+<body>
+
+	<p><a href="default.html">Lab 2 Home</a></p>
+
+	<p id="ageStuff">How old are you?
+    <input id="txtAge" type="text" />
+    <button id="btnAge">Enter</button>
+	</p>
+	<p id="result" class="special"></p>
+
+
+</body>
+</html>

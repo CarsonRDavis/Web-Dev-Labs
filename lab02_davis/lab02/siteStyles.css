@@ -1,0 +1,24 @@
+﻿body {
+	font-family:Verdana;
+	color:purple;
+}
+
+.special{
+	color:black;
+	font-weight:bold;
+}
+
+p{
+	margin-left:20px;
+}
+
+td{
+	color:red;
+}
+
+/* Contextual Style*/
+td.header {
+	font-style: italic;
+	border: dotted;
+	border-color: green;
+}
